@@ -10,11 +10,15 @@ var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
 
 var scoresLength = scores.length;
 
-var F = 0;
-var D = 0;
-var C = 0;
-var B = 0;
-var A = 0;
+var F = 0; //should be 2
+var D = 0; //should be 2
+var C = 0; //should be 3
+var B = 0; //should be 3
+var A = 0; //should be 2
+
+var min = Math.min.apply(null, scores);
+
+var max = Math.max.apply(null, scores);
 
 for (var i =0; i < scoresLength; i++) {
 	if (scores[i] < 61) {
@@ -30,4 +34,7 @@ for (var i =0; i < scoresLength; i++) {
 	}
 }
 
-console.log(A,B,C,D,F);
+console.log("This amount of A's", A,"This amount of B's",B,"This amount of C's",C,"This amount of D's",D,"This amount of F's",F);
+
+console.log("The lowest score is", min);
+console.log("The highest score is", max);
